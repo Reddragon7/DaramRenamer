@@ -1,0 +1,6 @@
+{
+  "name": "다람 리네이머",
+  "tagline": "파일명 일괄 변경 프로그램",
+  "body": "### 다람 리네이머\r\n다람 리네이머는 개인적으로 DarkNamer라는 툴을 사용 중에 실행 취소가 되지 않는 문제로 직접 만든 유틸리티 프로그램입니다.\r\n\r\n개선 요청은 GitHub의 다람 리네이머 저장소의 이슈트래커에 등록해주시면 빨리 확인할 수 있으니, 가급적이면 이슈트래커에 등록해주시고, 이슈트래커가 불편하시면 제 E-Mail(daramkun@live.com)로 보내주시면 최대한 빠르게 검토해보겠습니다.\r\n\r\n실행파일의 다운로드는 GitHub 저장소의 Releases 페이지에서 가능하고, 소스코드의 다운로드는 현재 페이지에서 가능합니다.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
