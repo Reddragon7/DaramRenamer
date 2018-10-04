@@ -79,6 +79,11 @@ namespace Daramkun.DaramRenamer.Processors.Tag
 					break;
 			}
 
+            		string uStr = Encoding.Default.GetString(Encoding.GetEncoding("ISO-8859-1").GetBytes(tag.Replace("?", "")));
+            		if(uStr.IndexOf('?') < 0)
+                		if(isContainHangul(uStr))
+                    			tag = Encoding.Default.GetString(Encoding.GetEncoding("ISO-8859-1").GetBytes(f.Tag.Title));
+		    
 			f.Dispose ();
 
 			string fn = Path.GetFileNameWithoutExtension ( file.ChangedFilename );
@@ -88,6 +93,16 @@ namespace Daramkun.DaramRenamer.Processors.Tag
 				$"{tag}{fn}{tag}{ext}" );
 
 			return true;
+		}
+
+		public bool isContainHangul(string s)
+		{
+		    char[] charArr = s.ToCharArray();
+		    foreach (char c in charArr)
+			if (char.GetUnicodeCategory(c) == System.Globalization.UnicodeCategory.OtherLetter)
+			    return true;
+
+		    return false;
 		}
 	}
 }
